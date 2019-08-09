@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
-    
+
     <title>Proofs</title>
-    
+
     <!--Import Google Icon Font-->
-      
-      
+
+
     <!-- Este es MI ESTILOS -->
       <link rel="stylesheet" href="">
 
@@ -34,17 +34,44 @@
 			</select>
 			<input class="btn" type="submit" value="ENVIAR" />
     </form>
-            
+
     <!-- INICIALIZACIONES DE JAVA-SCRIPT: Todas van aquí: -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    
+
     <!-- INICIALIZACION para el menu Hamburguesa y Dropdown: -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         M.AutoInit();
     });
     </script>
-    
+
 </body>
 </html>
+<?
+$dom  = new DOMDocument;
+$dom->validateOnParse = true;
+$dom->Load('index.php');
+$option1 = $dom->getElementById('hora1');
+$option2 = $dom->getElementById('hora1');
+$option3 = $dom->getElementById('hora1');
+$option4 = $dom->getElementById('hora1');
+$option5 = $dom->getElementById('hora1');
+/*
+* poner esto dentro del if === 10
+*/
+// Remover la opcion1
+$dom->getElementById('hora')->removeChild($option1);
+// Remover la opcion2
+$dom->getElementById('hora')->removeChild($option2);
+// Remover la opcion3
+$dom->getElementById('hora')->removeChild($option3);
+// Remover la opcion4
+$dom->getElementById('hora')->removeChild($option4);
+// Remover la opcion5
+$dom->getElementById('hora')->removeChild($option5);
+/*
+NOTA si se llega a eliminar todos los option Deshabilita el form porque todo esta lleno
+
+*/
+?>

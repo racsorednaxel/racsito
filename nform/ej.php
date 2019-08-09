@@ -24,5 +24,4 @@ $total =  "Nombre: " . $nombre . "\nCorreo: " . $email . "\nTeléfono: " . $tel 
 mail($destino,"Formulario prueba", $total);
 */
 
-?> 
-
+?>
